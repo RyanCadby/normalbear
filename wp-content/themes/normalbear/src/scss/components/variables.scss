@@ -1,0 +1,82 @@
+// -------------------------------------------- //
+//  NAME: Variables.scss
+//  VERSION: 1.0
+//  DESCRIPTION: Declare variables/constants for use throughout SASS
+// -------------------------------------------- //
+
+
+// -------- IMPORT BOOTSTRAP VARS & FUNCTIONS ------- //
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+@import "node_modules/bootstrap/scss/utilities";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/grid";
+
+
+// -------- OVERRIDE VARS ------- //
+
+// base font size
+$body-size: 18px;
+$body-size-mobile: 17px;
+
+// type
+$display-1-size: 3.25rem;
+$display-2-size: 2.25rem;
+$h1-font-size: 2.5rem;
+$h2-font-size: 1.95rem;
+$h3-font-size: 1.75rem;
+$h4-font-size: 1.5rem;
+$quote-font-size: 1.45rem;
+$h5-font-size: 1.2rem;
+$h6-font-size: 1.1rem;
+$small-mobile-size: .925rem;
+$x-small-font-size: .8rem;
+
+
+// grid
+$content-width: 70rem;
+$grid-gutter-width: 1.5rem;
+
+
+//spacers
+$spacer: 1rem !default;
+$spacers: () !default;
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: (
+        0: 0,
+        1: ($spacer * .25),
+        2: ($spacer * .5),
+        3: $spacer,
+        4: ($spacer * 1.5),
+        5: ($spacer * 2),
+        6: ($spacer * 3),
+        7: ($spacer * 4),
+        8: ($spacer * 5),
+);
+
+// set color vars
+// NOTE: Use bootstrap var names instead of custom red/yellow/etc.
+$theme-colors: (
+        'red' : #DB3B32,
+        'l-red' : #F93333,
+        'yellow' : #F6C70B,
+        'l-yellow' : #ffe066,
+        'black'  : #000,
+        'white'  : #fff,
+        'xd-gold' : #E58200,
+        'd-gold' : #F09B18,
+        'gold' : #F4A52C,
+        'l-gold' : #FFCF87,
+        'xl-gold' : #FFE8C5,
+        'xd-gray' : #191919,
+        'd-gray' : #212121,
+        'gray' : #2B2B2B,
+        'l-gray' : #e2e2e2,
+        'xl-gray' : #EBEBEB,
+        'xd-blue' : #0E404F,
+        'd-blue' : #095E78,
+        'blue' : #1B7F9D,
+        'l-blue' : #4999B1,
+        'xl-blue' : #DEF7FF
+);
