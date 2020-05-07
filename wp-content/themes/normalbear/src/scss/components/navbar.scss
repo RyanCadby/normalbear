@@ -1,0 +1,15 @@
+@import "variables";
+nav.navbar{
+  ul{
+    li.menu-item{
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      a:hover{
+        text-decoration: none;
+        color: $peach;
+      }
+    }
+  }
+}

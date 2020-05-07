@@ -29,6 +29,7 @@
 @import "./components/header";
 @import "./components/footer";
 @import "./components/cards";
+@import "./components/navbar";
 
 // --------------------------------------------- //
 // SECTION 1 - TYPE
@@ -41,33 +42,33 @@ html, body {
 }
 
 h1, .h1 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   line-height: .95;
 }
 
 h2, .h2 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
 }
 
 h3, .h3 {
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-weight: bold;
 }
 
 h4, .h4 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 h5, .h5 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
 h6, .h6 {
-  font-family: 'Roboto Slab', serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 400;
 }
 
@@ -81,6 +82,7 @@ h6, .h6 {
 
 .quote {
   font-size: $quote-font-size;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 p, .p {
@@ -89,17 +91,17 @@ p, .p {
 
 small, .small {
   font-size: $small-font-size;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .x-small {
   font-size: $x-small-font-size;
-  font-family: 'Roboto Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 a, .a {
-  color: theme-color('blue');
-  text-decoration: none;
+  color: theme-color('peach');
+  text-decoration: underline;
   cursor: pointer;
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
@@ -108,12 +110,65 @@ a, .a {
 
 a:hover, .a:hover {
   text-decoration: none;
-  color: theme-color('d-blue');
+  color: theme-color('d-teal');
 }
 
 .caps {
   text-transform: uppercase;
 }
+
+/*------ Text Color ------*/
+.d-purple{
+  color: $d-purple;
+}
+.purple{
+  color: $purple;
+}
+.d-navy{
+  color: $d-navy;
+}
+.navy{
+  color: $navy;
+}
+.l-navy{
+  color: $l-navy;
+}
+.d-teal{
+  color: $d-teal;
+}
+.teal{
+  color: $teal;
+}
+.peach{
+  color: $peach;
+}
+/* ------ Background Classes ------ */
+.bg-d-purple{
+  background-color: $d-purple;
+}
+.bg-purple{
+  background-color: $purple;
+}
+.bg-d-navy{
+  background-color: $d-navy;
+}
+.bg-navy{
+  background-color: $navy;
+}
+.bg-l-navy{
+  background-color: $l-navy;
+}
+.bg-d-teal{
+  background-color: $d-teal;
+}
+.bg-teal{
+  background-color: $teal;
+}
+.bg-peach{
+  background-color: $peach;
+}
+
+
 
 img{
   width: 100%;

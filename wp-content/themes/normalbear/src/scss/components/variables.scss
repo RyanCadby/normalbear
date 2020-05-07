@@ -58,25 +58,20 @@ $spacers: (
 // set color vars
 // NOTE: Use bootstrap var names instead of custom red/yellow/etc.
 $theme-colors: (
-        'red' : #DB3B32,
-        'l-red' : #F93333,
-        'yellow' : #F6C70B,
-        'l-yellow' : #ffe066,
-        'black'  : #000,
-        'white'  : #fff,
-        'xd-gold' : #E58200,
-        'd-gold' : #F09B18,
-        'gold' : #F4A52C,
-        'l-gold' : #FFCF87,
-        'xl-gold' : #FFE8C5,
-        'xd-gray' : #191919,
-        'd-gray' : #212121,
-        'gray' : #2B2B2B,
-        'l-gray' : #e2e2e2,
-        'xl-gray' : #EBEBEB,
-        'xd-blue' : #0E404F,
-        'd-blue' : #095E78,
-        'blue' : #1B7F9D,
-        'l-blue' : #4999B1,
-        'xl-blue' : #DEF7FF
+        'd-purple' : #342465,
+        'purple'   : #663A8A,
+        'd-navy'   : #09162D,
+        'navy'     : #00344E,
+        'l-navy'   : #155376,
+        'd-teal'   : #095F5F,
+        'teal'     : #2BB5B8,
+        'peach'    : #E5413C
 );
+$d-purple: #342465;
+$purple: #663A8A;
+$d-navy: #09162D;
+$navy: #00344E;
+$l-navy: #155376;
+$d-teal: #095F5F;
+$teal: #2BB5B8;
+$peach: #E5413C;

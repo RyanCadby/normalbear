@@ -14,6 +14,9 @@
     <!-- Header Code -->
     <?php the_field('header_code', 'option'); ?>
 
+    <!-- Link Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+
 
     <!-- Link included files and stylesheets -->
 <!--    <script src="https://kit.fontawesome.com/70e2c44acf.js" crossorigin="anonymous"></script>-->
@@ -35,7 +38,7 @@ $logo_size = 'medium';
 <!-- START PAGE -->
 <div id="page">
 
-    <section>
+    <section class="bg-navy">
         <div class="container">
 
             <!--    Start Nav Bar   -->
