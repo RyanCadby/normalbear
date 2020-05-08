@@ -28,8 +28,13 @@ require_once ( __DIR__ . '/sections/child-page-header.php');
 
 
 // Enqueue Styles and Scripts based on page template
-function enqueue_global_assets()
+function register_assets()
 {
+    //   front page
+    if ( is_front_page() ):
+        wp_enqueue_style('front-page-styles', get_template_directory_uri() . '/dist/css/front-page.css', array(), '1.0.0', 'all');
+    endif;
+
     // JQuery JS - swap WordPress' default and re-register
     wp_deregister_script('jquery'); // Disable WordPress' own version of JQuery, cf. http://wordpress.stackexchange.com/questions/189310/how-to-remove-default-jquery-and-add-js-in-footer
     wp_register_script( 'jQuery', 'https://code.jquery.com/jquery-3.4.1.min.js', array(), '3.4.1', false );
@@ -37,6 +42,9 @@ function enqueue_global_assets()
 
     wp_enqueue_style('global-styles', get_template_directory_uri() . '/dist/css/global.css', array(), '1.0.0', 'all');
     wp_enqueue_script('global-scripts', get_template_directory_uri() . '/dist/js/global.js', array(), '1.0.0', false);
+
+
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_global_assets');
+add_action('wp_enqueue_scripts', 'register_assets');
+

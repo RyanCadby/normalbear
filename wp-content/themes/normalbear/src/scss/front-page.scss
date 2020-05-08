@@ -1,0 +1,12 @@
+@import 'components/variables';
+
+section{
+  &.hero{
+    img.landing-line{
+      width: 10px;
+      position: absolute;
+      top: 200px;
+    }
+  }
+}
+

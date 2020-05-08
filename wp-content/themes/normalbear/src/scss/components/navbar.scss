@@ -1,15 +1,54 @@
 @import "variables";
 nav.navbar{
-  ul{
-    li.menu-item{
-      a {
+  padding: 0;
+  height: 3rem;
+
+  div.navbar-collapse{
+    height: 100%;
+  }
+  ul {
+    height: 100%;
+    align-items: center;
+
+    li.menu-item {
+      a.nav-link {
+        font-family: $heading-font-family;
+        font-size: $small-mobile-size;
+        font-weight: 600;
+        padding-left: 1rem;
+        padding-right: 1rem;
         text-decoration: none;
         color: #fff;
       }
-      a:hover{
+
+      a:hover {
         text-decoration: none;
         color: $peach;
       }
+
+      &.basecamp {
+        height: 100%;
+
+        a {
+          display: flex;
+          align-items: center;
+          height: 100%;
+          padding-left: 1rem;
+          padding-right: 1rem;
+          background-color: $purple;
+
+          &:hover {
+            background-color: $peach;
+            color: #fff;
+          }
+        }
+      }
     }
   }
+
+  .nav-logo {
+    max-width: 200px;
+  }
+
+
 }

@@ -15,7 +15,7 @@
     <?php the_field('header_code', 'option'); ?>
 
     <!-- Link Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;700&family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
 
     <!-- Link included files and stylesheets -->
@@ -27,6 +27,7 @@
 <body <?php body_class(); ?>>
 
 <?php
+$GLOBALS['prefix'] = 'localhost/normalbear';
 $about = get_field('_about', 'option');
 $site_logo = null;
 if(isset($about['logo'])):
@@ -47,7 +48,7 @@ $logo_size = 'medium';
                 <!-- nav bar logo -->
                 <a class="navbar-brand" href="<?php echo get_home_url(); ?>" id="logo">
                     <?php if ($site_logo):
-                        echo wp_get_attachment_image( $site_logo, $logo_size ); ?>
+                        echo wp_get_attachment_image( $site_logo, $logo_size, false, array('class' => 'nav-logo') ); ?>
                     <?php else: ?>
                         <span><?php echo get_bloginfo('name'); ?></span>
                     <?php endif; ?>

@@ -37,7 +37,7 @@
 
 html, body {
   font-size: $body-size;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #000; // set std black
 }
 
@@ -102,6 +102,7 @@ small, .small {
 a, .a {
   color: theme-color('peach');
   text-decoration: underline;
+  text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: all .25s ease-in-out;
   -moz-transition: all .25s ease-in-out;
@@ -141,6 +142,12 @@ a:hover, .a:hover {
 }
 .peach{
   color: $peach;
+}
+.white{
+  color: $white;
+}
+.black{
+  color: $black;
 }
 /* ------ Background Classes ------ */
 .bg-d-purple{
