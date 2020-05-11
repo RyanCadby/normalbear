@@ -71,7 +71,7 @@ function sbc_connect_widget() {
             if( have_rows('_about', 'option') ):
                 while( have_rows('_about', 'option') ): the_row();
                     if( have_rows('connect_media') ):
-                        echo 'Follow Us: ';
+//                        echo 'Follow Us: ';
                         while( have_rows('connect_media') ): the_row();
                             $link = get_sub_field('link');
                             $platform = get_sub_field('platform');

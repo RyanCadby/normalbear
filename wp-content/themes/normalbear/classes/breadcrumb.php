@@ -16,14 +16,14 @@ if ( ! function_exists( 'mj_wp_breadcrumb' ) ) {
         $text_domain =  $theme->get( 'TextDomain' );
         global $prefix;
         // Open list
-        $breadcrumb = '<nav aria-label="breadcrumb" class="mb-3 mb-lg-5"><' . $list_style . ' id="' . $list_id . '" class="' . $list_class . '">';
+        $breadcrumb = '<nav id="breadcrumb-nav" aria-label="breadcrumb" class=""><' . $list_style . ' id="' . $list_id . '" class="' . $list_class . '">';
 
 
         // Front page
         if ( is_front_page() ) {
             $breadcrumb .= '<li class="breadcrumb-item ' . $active_class . '"' . $aria_active . '><span>' . get_bloginfo( 'name' ). '</span></li>';
         } else {
-            $breadcrumb .= '<li class="breadcrumb-item home"><a href="' . home_url() . '"><i class="fas fa-home"></i></a></li>';
+            $breadcrumb .= '<li class="breadcrumb-item home"><a href="' . home_url() . '">Home</a></li>';
         }
 
 // SCHOOLS START //

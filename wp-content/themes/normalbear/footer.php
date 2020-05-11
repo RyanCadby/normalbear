@@ -27,43 +27,48 @@ $zip = $about['zip'];
 ?>
 <footer>
     <!-- Footer section - populated with the theme options footer section and widgets -->
-    <section>
+    <section class="footer">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-sm-6 col-md-4">
-                    <img class="logo footer-logo" src="<?php echo get_template_directory_uri() . '/dist/images/nb-logo-hor-blk.png'; ?>" alt="Normal Bear Logo">
+                <div class="col col-12 col-sm-6 col-md-3">
+                    <img class="logo footer-logo mb-3" src="<?php echo get_template_directory_uri() . '/dist/images/nb-logo-hor-blk.png'; ?>" alt="Normal Bear Logo">
                     <?php if ( is_active_sidebar( 'left-col' ) ) : ?>
                         <?php dynamic_sidebar( 'left-col' ); ?>
                     <?php endif; ?>
-                    <a class="btn btn-secondary" href="<?php echo get_template_directory_uri() . '/contact'?>">Let's Talk.</a>
+                    <a class="btn btn-primary mt-3" href="<?php echo get_template_directory_uri() . '/contact'?>">Let's Talk.</a>
                 </div>
-                <div class="col col-12 col-md-6 col-lg-2">
+                <div class="col col-12 col-md-6 col-lg-3 footer-nav-cont">
                     <?php if ( is_active_sidebar( 'center-col' ) ) : ?>
                         <?php dynamic_sidebar( 'center-col' ); ?>
                     <?php endif; ?>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-3">
-                    <h3>Contact</h3>
+                <div class="col col-12 col-sm-6 col-md-3 footer-contact-cont">
+                    <h4>Contact</h4>
                     <?php if($phone): ?>
-                        <div class="phone">
-                            <i class="fas fa-mobile-alt"></i>
-                            <a href="tel:<?php echo $phone; ?>"><?php echo $phone ?></a>
+                        <div class="phone-cont">
+                            <a class="phone" href="tel:<?php echo $phone; ?>"><i class="fas fa-mobile-alt"></i> <span><?php echo $phone ?></span></a>
                         </div>
                     <?php endif; ?>
-                    <a class="email">
-                        <a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
-                    <div class="address">
-                        <a href="https://www.google.com/maps/place/<?php echo $address_1 . '+' . $city . '+' . $state . '+' . $zip;?>">
-                        <p class="address1"><?php echo $address_1; ?></p>
-                        <?php if($address_2): ?>
-                        <p class="address2"><?php echo $address_2; ?></p>
-                        <?php endif; ?>
-                        <p class="address3"><?php echo $city . ', ' . $state .  $zip?></p>
+                    <div class="email-cont">
+                        <a class="email" href="mailto:<?php echo $email; ?>"><i class="fas fa-envelope"></i> <span><?php echo $email; ?></span></a>
+                    </div>
+                    <div class="address-cont">
+                        <a class="address" href="https://www.google.com/maps/place/<?php echo $address_1 . '+' . $city . '+' . $state . '+' . $zip;?>">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="address-item-cont">
+                                <p class="address-item address1"><?php echo $address_1; ?></p>
+                                <?php if($address_2): ?>
+                                <p class="address-item address2"><?php echo $address_2; ?></p>
+                                <?php endif; ?>
+                                <p class="address-item address3"><?php echo $city . ', ' . $state .  $zip?></p>
+                            </div>
                         </a>
                     </div>
 
                 </div>
                 <div class="col col-12 col-sm-6 col-md-3">
+                    <h4>Subscribe</h4>
+                    <div class="email-input"></div>
                     <?php if ( is_active_sidebar( 'right-col' ) ) : ?>
                         <?php dynamic_sidebar( 'right-col' ); ?>
                     <?php endif; ?>

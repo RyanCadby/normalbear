@@ -8,7 +8,7 @@
 @import "./components/variables";
 @import "node_modules/bootstrap/scss/type";
 @import "node_modules/bootstrap/scss/buttons";
-@import "node_modules/bootstrap/scss/breadcrumb";
+//@import "node_modules/bootstrap/scss/breadcrumb";
 @import "node_modules/bootstrap/scss/popover";
 @import "node_modules/bootstrap/scss/navbar";
 @import "node_modules/bootstrap/scss/dropdown";
@@ -30,6 +30,7 @@
 @import "./components/footer";
 @import "./components/cards";
 @import "./components/navbar";
+@import "./components/cta";
 
 // --------------------------------------------- //
 // SECTION 1 - TYPE
@@ -50,6 +51,7 @@ h1, .h1 {
 h2, .h2 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
+  font-size: 2.3rem;
 }
 
 h3, .h3 {
@@ -74,6 +76,7 @@ h6, .h6 {
 
 .display-1 {
   font-size: $display-1-size;
+  font-weight: $display-1-weight;
 }
 
 .display-2 {
@@ -87,6 +90,7 @@ h6, .h6 {
 
 p, .p {
   line-height: 1.55;
+  margin: 0;
 }
 
 small, .small {
@@ -186,7 +190,14 @@ img{
 // --------------------------------------------- //
 // SECTION 2 - GRID SYSTEM
 // --------------------------------------------- //
+section{
+  padding: 5rem 0;
 
+  &.nav-section{
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
 
 // --------------------------------------------- //
 // SECTION 3 - COLOR UTILITIES
@@ -198,6 +209,42 @@ img{
 // --------------------------------------------- //
 // SECTION 4 - BUTTONS
 // --------------------------------------------- //
+.btn-cont{
+  display: flex;
+}
+a.btn{
+  border-radius: 50px;
+  padding: .65rem 1.5rem;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center;
+  color: $white;
+  border: none;
+  text-decoration: none;
+  display: block;
+  width: auto;
+  font-family: $heading-font-family;
+  font-weight: 600;
+  font-size: .8rem;
+
+  &.btn-primary{
+    background-color: $peach;
+    &:hover{
+      background-color: $purple;
+      text-decoration: none;
+      color: $white;
+    }
+  }
+  &.btn-secondary{
+    background-color: $teal;
+    &:hover{
+      background-color: $d-teal;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}
+
 
 // --------------------------------------------- //
 // ?? WHAT ELSE NEEDS TO BE INCLUDED ??

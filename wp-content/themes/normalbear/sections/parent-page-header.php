@@ -13,18 +13,18 @@ function parent_page_header($page_title=null, $desc=null, $bg_img=null, $bg_colo
         $desc = get_the_excerpt();
     }
     ?>
-    <section class="parent-header">
+    <section class="parent-header" style="background-image: url('<?php if($bg_img != null): echo $bg_img; endif; ?>'">
         <!-- full width background - defaults to bg-primary class -->
         <div class="container-fluid <?php echo $bg_color; ?>">
             <!-- content width container -->
             <div class="container">
                 <div class="row">
-                    <div class="col col-12">
+                    <div class="col col-12 col-md-8">
                         <?php mj_wp_breadcrumb(); ?>
-                        <h1 class="head parent-head"><?php $page_title ?></h1>
+                        <h1 class="head parent-head white"><?php echo $page_title; ?></h1>
                         <?php if($desc): ?>
                             <div class="parent-desc-cont">
-                                <p class="desc parent-desc">
+                                <p class="desc parent-desc white">
                                     <?php echo $desc; ?>
                                 </p>
                             </div>
@@ -37,9 +37,6 @@ function parent_page_header($page_title=null, $desc=null, $bg_img=null, $bg_colo
                 -- styles are applied to the container
                 -- overlay is applied to the container
             -->
-            <div class="header-bg-img-cont">
-                <?php if($bg_img != null): echo $bg_img; endif; ?>
-            </div>
         </div>
     </section>
 <?php } ?>

@@ -3,3 +3,86 @@
 //  VERSION: 1.0
 //  DESCRIPTION:
 // -------------------------------------------- //
+
+section{
+  &.footer{
+    .col{
+      margin-top: 1.2rem;
+      &:first-of-type{
+        margin-top: 0;
+      }
+    }
+    h4{
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .footer-logo{
+      max-width: 250px;
+    }
+
+    //footer nav
+    .footer-nav-cont{
+      padding-left: 2rem;
+      ul{
+        padding: 0;
+        list-style-type: none;
+
+        li{
+          a{
+            text-decoration: none;
+            font-family: $heading-font-family;
+            font-weight: 700;
+            color: $d-navy;
+            &:hover{
+              color: $teal;
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+
+    //footer contact
+    .footer-contact-cont{
+      a{
+        display: flex;
+        color: $d-navy;
+        text-decoration: none;
+        text-transform: none;
+        align-items: center;
+        padding-bottom: .45rem;
+        padding-top: .45rem;
+        position: relative;
+
+        &:hover{
+          color: $teal;
+          text-decoration: none;
+        }
+
+        i{
+          display: block;
+          height: auto;
+          line-height: 1;
+          position: absolute;
+          &.fa-map-marker-alt{
+            top: 5px;
+          }
+        }
+        span{
+          padding-left: 1.8rem;
+          font-size: .8rem;
+        }
+        div.address-item-cont{
+          padding-left: 1.8rem;
+          font-size: .8rem;
+        }
+      }
+    }
+
+  }
+  &#bottom-bar{
+    padding: 1rem 0;
+    background-color: $d-navy;
+    color: white;
+  }
+}

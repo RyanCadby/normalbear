@@ -9,6 +9,7 @@ get_header();
 ?>
 
 <?php //------ variables ------//
+    $id = get_the_ID();
     // Hero
     $hero = get_field('_hero');
     $hero_bg = $hero['bg_img'];
@@ -34,12 +35,14 @@ get_header();
     $img_left_sub = $img_left_section['sub'];
     $img_left_desc = $img_left_section['desc'];
 
-    // Button Right Section
-    $btn_right = get_field('_btn_right_section');
-    $btn_right_head = $btn_right['head'];
-    $btn_right_sub = $btn_right['sub'];
-    $btn_right_txt = $btn_right['btn_txt'];
-    $btn_right_link = $btn_right['btn_link'];
+    // CTA section
+    $cta = get_field('_cta', $id, true);
+    $cta_head = $cta['head'];
+    $cta_sub = $cta['sub'];
+    $cta_btn_link = $cta['link'];
+    $cta_btn_txt = $cta['txt'];
+    $cta_bg = $cta['bg_img'];
+    if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'; endif;
 
     // Portfolio Section
     $portfolio_head = get_field('portfolio_head');
@@ -50,9 +53,12 @@ get_header();
 <section class="hero" style="background-image: url('<?php echo $hero_bg; ?>)">
     <div class="container">
         <div class="row">
-            <div class="col">
-                <h1><?php echo $hero_head; ?></h1>
+            <div class="col col-12 col-sm-6">
+                <h1 class="display-1 white"><?php echo $hero_head; ?></h1>
                 <p class="white"><?php echo $hero_sub; ?></p>
+                <div class="btn-cont">
+                    <a class="btn btn-primary" href="<?php echo $hero_btn_link; ?>"><?php echo $hero_btn_txt; ?></a>
+                </div>
             </div>
             <img class="accent landing-line" src="<?php echo get_template_directory_uri(); ?>/dist/images/landing-line.png" alt="">
         </div>
@@ -61,14 +67,14 @@ get_header();
 </section>
 
 <!-- Title Left Section -->
-<section>
+<section class="title-left">
     <div class="container">
         <div class="row">
-            <div class="col-12 col-md-6">
-                <h2><?php echo $title_left_title; ?></h2>
+            <div class="col col-12 col-md-4">
+                <h2 class="purple"><?php echo $title_left_title; ?></h2>
             </div>
-            <div class="col-12 col-md-6">
-                <p class="quote"><?php echo $title_left_sub; ?></p>
+            <div class="col col-12 col-md-8">
+                <p class="quote purple"><?php echo $title_left_sub; ?></p>
                 <p><?php echo $title_left_desc; ?></p>
             </div>
         </div>
@@ -77,7 +83,7 @@ get_header();
 
 <!-- Services Section -->
 <?php if(have_rows('services_')): ?>
-    <section>
+    <section class="front-page services">
         <div class="container">
             <div class="row">
                 <?php while( have_rows('services_') ): the_row(); ?>
@@ -94,17 +100,17 @@ get_header();
                                 if($icon):
                                     echo wp_get_attachment_image( $icon, 'medium');
                                 else:
-                                    echo '<img src="' . get_template_directory_uri() . '/dist/images/placeholder.jpg">';
+                                    echo '<img src="' . get_template_directory_uri() . '/dist/images/service-icon-placeholder.png">';
                                 endif;?>
                             </div>
-                            <h3 class="service-head head"><?php echo $head; ?></h3>
-                            <p class="desc service-desc"><?php echo $desc; ?></p>
+                            <p class="service-head card-head"><?php echo $head; ?></p>
+                            <p class="card-desc service-desc"><?php echo $desc; ?></p>
                         </a>
                     </div>
                 <?php endwhile; ?>
             </div>
-            <div class="row">
-                <div class="col col-12 align-items-center">
+            <div class="row pt-4">
+                <div class="col col-12 justify-content-center d-flex">
                     <a href="<?php echo $service_btn_link; ?>" class="btn btn-secondary"><?php echo $service_btn_txt; ?></a>
                 </div>
             </div>
@@ -113,8 +119,8 @@ get_header();
 <?php endif; ?>
 
 <!-- Image Left Section -->
-<section>
-    <div class="container-fluid">
+<section class="img-left p-0">
+    <div class="container-fluid p-0">
         <div class="row">
             <div class="col col-2 col-md-4 col-lg-6">
                 <?php
@@ -124,64 +130,55 @@ get_header();
                     echo '<img src="' . get_template_directory_uri() . '/dist/images/placeholder.jpg">';
                 endif;?>
             </div>
-            <div class="col col-10 col-md-8 col-lg-6">
-                <h2><?php echo $img_left_head; ?></h2>
-                <p class="quote"><?php echo $img_left_sub; ?></p>
+            <div class="col col-10 col-md-8 col-lg-6 bod">
+                <h2 class="d-teal"><?php echo $img_left_head; ?></h2>
+                <p class="quote teal"><?php echo $img_left_sub; ?></p>
                 <p><?php echo $img_left_desc; ?></p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Button Right Section -->
-<section>
+<!-- CTA Section -->
+<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>'">
     <div class="container">
         <div class="row">
             <div class="col col-12 col-md-6">
-                <h2 class="white"><?php echo $btn_right_head; ?></h2>
-                <p class="white"><?php echo $btn_right_sub; ?></p>
+                <h2 class="white"><?php echo $cta_head; ?></h2>
+                <p class="white"><?php echo $cta_sub; ?></p>
             </div>
-            <div class="col col-12 col-md-6">
-                <a class="btn btn-primary" href="<?php echo get_template_directory_uri() . $btn_right_link; ?>"><?php echo $btn_right_txt; ?></a>
+            <div class="col col-12 col-md-6 btn-cont">
+                <a class="btn btn-primary" href="<?php echo get_template_directory_uri() . $cta_btn_link; ?>"><?php echo $cta_btn_txt; ?></a>
             </div>
         </div>
     </div>
 </section>
 
 <!-- Portfolio Section -->
-<section id="portfolio-section">
+<section class="portfolio" id="portfolio">
     <div class="container-fluid">
-        <div class="row">
-            <div class="col col-12 align-items-center">
+        <div class="row head-cont">
+            <div class="col col-12 d-flex justify-content-center">
                 <h2 class="navy"><?php echo $portfolio_head; ?></h2>
             </div>
         </div>
         <?php if(have_rows('portfolio_') ): ?>
         <div class="row">
             <?php while( have_rows('portfolio_') ): the_row(); ?>
-            <div class="col col-sm-6 col-md-4 col-xl-3">
+            <div class="col col-sm-6 col-md-4">
                 <?php
-                $img = get_field('img');
-                $head = get_field('head');
+                $img = get_sub_field('img');
                 if($img):
                     echo wp_get_attachment_image( $img, 'medium');
                 else:
                     echo '<img src="' . get_template_directory_uri() . '/dist/images/placeholder.jpg">';
                 endif; ?>
                 <div class="portfolio-overlay"></div>
-                <div class="portfolio-hover"><h3 class="white"><?php echo $head; ?></h3></div>
+                <div class="portfolio-hover"><h3 class="white"><?php //echo $head; ?></h3></div>
             </div>
             <?php endwhile; ?>
         </div>
         <?php endif; ?>
-    </div>
-</section>
-
-<section>
-    <div class="container">
-        <div class="row">
-            <?php show_card_section(); ?>
-        </div>
     </div>
 </section>
 

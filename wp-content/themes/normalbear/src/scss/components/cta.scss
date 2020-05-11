@@ -1,0 +1,16 @@
+//----------------- CTA section ------------------//
+section {
+  &.cta {
+    //background-image: url("http://localhost:3000/normalbear/wp-content/themes/normalbear/dist/images/cta-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right center;
+
+    .btn-cont {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
