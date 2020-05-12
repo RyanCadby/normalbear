@@ -1,0 +1,62 @@
+@import 'components/variables';
+@import 'components/parent-header';
+
+.service-index{
+  a{
+    &.card.service-card{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      .icon-cont{
+        transition: all .25s ease-in-out;
+        background-color: $navy;
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+          width: 65%;
+        }
+      }
+      &:hover{
+        text-decoration: none !important;
+        p {
+          text-decoration: none !important;
+          &.service-head {
+            color: $purple;
+          }
+        }
+        &.service-card{
+          .icon-cont{
+            background-color: $purple;
+          }
+        }
+      }
+      p{
+        transition: all .25s ease-in-out;
+        text-transform: none;
+        text-decoration: none;
+        &.service-head{
+          font-family: $heading-font-family;
+          font-weight: 700;
+          font-size: 1.4rem;
+          color: $navy;
+          margin: 1.5rem 0 .25rem 0;
+          line-height: 1;
+        }
+        &.service-desc{
+          color: $black;
+          font-family: $body-font-family;
+          font-size: .9rem;
+          padding: 0 .75rem;
+        }
+      }
+    }
+  }
+
+}

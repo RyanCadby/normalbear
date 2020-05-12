@@ -30,7 +30,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
 
 <!-- Services Section -->
 <?php if(have_rows('services_')): ?>
-    <section class="front-page services">
+    <section class="services service-index">
         <div class="container">
             <div class="row">
                 <?php while( have_rows('services_') ): the_row(); ?>
@@ -51,7 +51,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
                                 endif;?>
                             </div>
                             <p class="service-head card-head"><?php echo $head; ?></p>
-                            <p class="card-desc service-desc"><?php echo $desc; ?></p>
+                            <p class="card-desc service-desc mb-0"><?php echo $desc; ?></p>
                         </a>
                     </div>
                 <?php endwhile; ?>
