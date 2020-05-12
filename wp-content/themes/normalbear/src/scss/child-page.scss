@@ -1,0 +1,123 @@
+// -------------------------------------------- //
+//  NAME: CHILD-PAGE.SCSS
+//  VERSION: 1.0
+//  DESCRIPTION:
+// -------------------------------------------- //
+@import "components/variables";
+@import 'components/child-header';
+@import "components/cta";
+@import "components/portfolio";
+
+section{
+  // Sub meenu section
+  &.sub-menu{
+    .sub-menu-list{
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      column-count: 2;
+      li{
+        a{
+          color: $navy;
+          padding-bottom: .5rem;
+          display: block;
+          text-transform: none;
+          font-family: $heading-font-family;
+          font-weight: 700;
+          &:hover{
+            color: $teal;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+
+  // child services section
+  &.child-services {
+    .row {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+
+      .child-service-cont {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h2{
+          color: $purple;
+        }
+        .quote{
+          color: $purple;
+        }
+
+        a.learn-more{
+          color: $purple;
+          padding-bottom: .5rem;
+          display: block;
+          text-transform: none;
+          font-family: $heading-font-family;
+          font-weight: 700;
+          &:hover{
+            color: $teal;
+            text-decoration: none;
+          }
+        }
+      }
+
+      .child-service-img-cont {
+        display: flex;
+        justify-content: flex-end;
+
+        a.icon-link {
+          display: block;
+          height: 18rem;
+          width: 18rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 1rem;
+          transition: box-shadow .3s ease-in-out;
+
+          &:hover{
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+          }
+
+          img, .child-service-icon {
+            width: 40%;
+            height: auto;
+          }
+        }
+
+      }
+
+      &.img-left {
+        .child-service-img-cont {
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
+
+  // process section
+  &.process{
+    .process-step-cont{
+      .process-card{
+        padding: 1rem;
+        background-color: rgba(43, 181, 184, .1);
+        border-radius: .5rem;
+        margin-bottom: 1rem;
+
+        p.head{
+          color: $d-teal;
+          font-family: $heading-font-family;
+          font-weight: 700;
+          text-transform: capitalize;
+          span{
+            color: $teal;
+          }
+        }
+      }
+    }
+  }
+}

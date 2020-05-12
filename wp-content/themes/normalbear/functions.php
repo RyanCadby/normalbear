@@ -45,6 +45,13 @@ function register_assets()
     //   parent page / service index page
     elseif ( is_page_template('template-parent.php') ):
         wp_enqueue_style('parent-page-styles', get_template_directory_uri() . '/dist/css/parent-page.css', array(), '1.0.0', 'all');
+    //   child page
+    elseif ( is_page_template('template-child.php') ):
+        wp_enqueue_style('child-page-styles', get_template_directory_uri() . '/dist/css/child-page.css', array(), '1.0.0', 'all');
+    //   GRANDchild page
+    elseif ( is_page_template('template-grandchild.php') ):
+        wp_enqueue_style('grandchild-page-styles', get_template_directory_uri() . '/dist/css/grandchild-page.css', array(), '1.0.0', 'all');
+
     endif;
 
 }

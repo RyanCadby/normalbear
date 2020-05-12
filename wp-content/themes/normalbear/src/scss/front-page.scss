@@ -1,4 +1,11 @@
+// -------------------------------------------- //
+//  NAME: FRONT-PAGE.SCSS
+//  VERSION: 1.0
+//  DESCRIPTION:
+// -------------------------------------------- //
+
 @import 'components/variables';
+@import "components/portfolio";
 
 section{
   &.hero{
@@ -86,44 +93,5 @@ section{
     }
   }
 
-  //----------------- portfolio section ------------------//
-  &.portfolio{
-    padding: 0;
-    .row{
-      padding: 0;
-
-      &.head-cont{
-        padding: 3rem 15px;
-      }
-      .col{
-        padding: 0;
-      }
-    }
-
-    .portfolio-overlay{
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-color: blue;
-      opacity: .3;
-      top: 0;
-      left: 0;
-      transition: all .2s ease-in-out;
-
-      &:hover{
-        opacity: 0;
-        cursor: pointer;
-      }
-    }
-    .portfolio-hover{
-      position: absolute;
-      //width: 100%;
-      //height: 100%;
-      background-color: blue;
-      opacity: 0;
-      top: 0;
-      left: 0;
-    }
-  }
 }
 
