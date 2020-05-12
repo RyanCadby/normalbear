@@ -7,3 +7,39 @@
 @import 'components/grandchild-header';
 @import "components/cta";
 @import "components/sidebar";
+@import "components/breadcrumb";
+
+section{
+  pre{
+    float: left;
+    width: 35%;
+    left: -200px;
+    position: relative;
+    overflow: visible;
+  }
+  img.alignleft{
+    width: 400px;
+    height: auto;
+    border-radius: 1rem;
+  }
+  p{
+    margin-bottom: 1.5rem;
+  }
+
+  pre{
+    margin: 2rem 0 3rem 0;
+    &:before{
+      content: "";
+      width: 3000px;
+      height: 120%;
+      position: absolute;
+      left: -2800px;
+      background: $purple;
+      z-index: -1;
+      top: -10%;
+      border-radius: 1rem;
+      opacity: .2;
+    }
+  }
+
+}

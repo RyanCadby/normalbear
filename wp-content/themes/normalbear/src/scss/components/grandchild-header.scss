@@ -3,3 +3,45 @@
 //  VERSION: 1.0
 //  DESCRIPTION:
 // -------------------------------------------- //
+@import "variables";
+
+section{
+  padding-bottom: 0;
+  &.grandchild-header{
+    &:before{
+      content: "";
+      height: 9rem;
+      width: 10px;
+      position: absolute;
+      top: 0;
+      left: calc(50% - 580px);
+      background-color: $purple;
+    }
+    nav#breadcrumb-nav{
+      ol{
+        li.breadcrumb-item{
+          a{
+            color: $purple;
+
+            &:hover{
+              color: $teal;
+              &:before{
+                color: $teal;
+              }
+            }
+            &:before{
+              color: $purple;
+            }
+          }
+        }
+      }
+    }
+
+    .grandchild-header-img{
+      width: 80px;
+      position: absolute;
+      left: calc(50% - 700px);
+      top: 5rem;
+    }
+  }
+}

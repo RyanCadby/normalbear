@@ -1,0 +1,33 @@
+.purple{
+    color: #663A8A;
+}
+.teal{
+    color: #2BB5B8;
+}
+.grandchild-sub{
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 1.3rem;
+}
+.paragraph, p{
+    font-size: .8rem;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+
+}
+.grandchild-img-cont{
+    position: relative;
+    /*display: inline;*/
+    /*width: 50%;*/
+    /*height: auto;*/
+    /*border-radius: .5rem;*/
+}
+.grandchild-img-cont img:before{
+    /*content:"";*/
+    /*height: 120%;*/
+    /*width: 100%;*/
+    /*position: absolute;*/
+    /*background: purple;*/
+    /*top: -10%;*/
+    /*left: -20%;*/
+    /*z-index: -1;*/
+}

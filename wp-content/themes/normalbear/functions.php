@@ -13,6 +13,7 @@ require_once( __DIR__ . '/classes/menus.php');
 require_once( __DIR__ . '/classes/theme-options.php');
 require_once( __DIR__ . '/classes/utilities.php');
 require_once( __DIR__ . '/classes/widgets.php');
+require_once( __DIR__ . '/classes/wysiwyg.php');
 
 
 // Components
@@ -25,6 +26,7 @@ require_once( __DIR__ . '/components/modal.php');
 require_once( __DIR__ . '/sections/card-section.php');
 require_once( __DIR__ . '/sections/parent-page-header.php');
 require_once ( __DIR__ . '/sections/child-page-header.php');
+require_once ( __DIR__ . '/sections/grandchild-page-header.php');
 
 
 // Enqueue Styles and Scripts based on page template
