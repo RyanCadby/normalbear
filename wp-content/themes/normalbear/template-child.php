@@ -39,10 +39,11 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
 ?>
 
 <!-- Child Header -->
-<?php parent_page_header($page_title, $page_sub_title, $header_bg); ?>
+<?php page_header($page_title, $page_sub_title, $header_bg, null, 'child'); ?>
 
+<div class="child-service-main-cont">
 <!-- Sub Menu -->
-<section class="sub-menu">
+<section class="sub-menu pb-0">
     <div class="container">
         <div class="row">
             <div class="col col-12 col-md-6">
@@ -73,6 +74,18 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
     </div>
 </section>
 
+    <!-- Dynamic Search Bar -->
+    <section class="search-section child">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col col-12">
+                    <input type="text" id="dynamic-search-child" class="dynamic-search" placeholder="Searching for something specific?">
+                    <i class="fas fa-search"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <!-- Child Services -->
 <section class="child-services">
     <div class="container">
@@ -87,10 +100,14 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
                     $icon = get_sub_field('icon');
                     $bg = get_sub_field('bg');
                     if(!$bg): $bg = get_template_directory_uri() . '/dist/images/grand-child-placeholder-bg-1.png'; endif;
+                    $target = strtolower($head);
+//                    $target = str_replace(' ', '-', $target);
                     ?>
-                    <div class="row img-right">
-                        <div class="col col-12 col-sm-9 col-md-7 child-service-cont">
-                            <h2 class="head child-service-head"><?php echo $head; ?></h2>
+                    <div class="row img-right child-service-row" target="<?php echo $target; ?>">
+                        <div class="col col-12 col-md-7 child-service-cont">
+                            <a href="<?php echo $link; ?>" class="child-service-link">
+                                <h3 class="head child-service-head"><?php echo $head; ?></h3>
+                            </a>
                             <p class="quote"><?php echo $sub; ?></p>
                             <p class="desc"><?php echo $desc; ?></p>
                             <a href="<?php echo $link; ?>" class="learn-more">
@@ -112,15 +129,18 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
                     $icon = get_sub_field('icon');
                     $bg = get_sub_field('bg');
                     if(!$bg): $bg = get_template_directory_uri() . '/dist/images/grand-child-placeholder-bg-1.png'; endif;
+                    $target = strtolower($head);
                     ?>
-                    <div class="row img-left">
+                    <div class="row img-left child-service-row" target="<?php echo $target; ?>">
                         <div class="col col-12 col-sm-3 col-md-5 child-service-img-cont">
                             <a href="<?php echo $link; ?>" class="icon-link" style="background-image:url('<?php echo $bg; ?>')">
                                 <?php if($icon): echo wp_get_attachment_image( $icon, 'medium', array( "class" => "child-service-icon" ) ); endif; ?>
                             </a>
                         </div>
-                        <div class="col col-12 col-sm-9 col-md-7 child-service-cont">
-                            <h2 class="head child-service-head"><?php echo $head; ?></h2>
+                        <div class="col col-12 col-md-7 child-service-cont">
+                            <a href="<?php echo $link; ?>" class="child-service-link">
+                                <h3 class="head child-service-head"><?php echo $head; ?></h3>
+                            </a>
                             <p class="quote"><?php echo $sub; ?></p>
                             <p class="desc"><?php echo $desc; ?></p>
                             <a href="<?php echo $link; ?>" class="learn-more">
@@ -134,7 +154,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
         <?php endif; ?>
     </div>
 </section>
-
+</div>
 
 <!-- Portfolio Section -->
 <section class="portfolio" id="portfolio">

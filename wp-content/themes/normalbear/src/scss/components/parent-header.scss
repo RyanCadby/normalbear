@@ -5,3 +5,14 @@
 // -------------------------------------------- //
 @import "variables";
 @import "breadcrumb";
+
+h1.parent-head {
+  position: relative;
+
+  &:before {
+    content: url("//localhost/normalbear/wp-content/themes/normalbear/dist/images/rocket-1.png");
+    position: absolute;
+    left: -150px;
+    top: -40px;
+  }
+}

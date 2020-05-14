@@ -26,21 +26,35 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
 ?>
 
 <!-- Child Header -->
-<?php parent_page_header($page_title, $page_sub_title, $header_bg); ?>
+<?php page_header($page_title, $page_sub_title, $header_bg); ?>
+
+<!-- Dynamic Search Bar -->
+<section class="search-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col col-11">
+                <input type="text" id="dynamic-search" class="dynamic-search" placeholder="Searching for something specific?">
+                <i class="fas fa-search"></i>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- Services Section -->
 <?php if(have_rows('services_')): ?>
     <section class="services service-index">
         <div class="container">
-            <div class="row">
+            <div class="row" id="service-row">
                 <?php while( have_rows('services_') ): the_row(); ?>
                     <?php
                     $icon = get_sub_field('img');
                     $head = get_sub_field('head');
                     $desc = get_sub_field('desc');
                     $link = get_sub_field('link');
+                    $target = strtolower($head);
+//                    $target = str_replace(' ', '-', $target);
                     ?>
-                    <div class="col col-12 col-sm-6 col-md-4">
+                    <div class="col col-12 col-sm-6 col-md-4 service-col" target="<?php echo $target; ?>">
                         <a href="<?php echo $link; ?>" class="card service-card">
                             <div class="icon-cont">
                                 <?php

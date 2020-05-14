@@ -43,6 +43,9 @@ html, body {
 #content{
   position: relative;
 }
+#page{
+  overflow-x: hidden;
+}
 
 h1, .h1 {
   font-family: 'Montserrat', sans-serif;
@@ -124,6 +127,10 @@ a:hover, .a:hover {
   text-transform: uppercase;
 }
 
+input, input#dynamic-search, input#dynamic-search-child{
+  font-family: 'Comfortaa', sans-serif;
+}
+
 /*------ Text Color ------*/
 .d-purple{
   color: $d-purple;
@@ -180,7 +187,6 @@ a:hover, .a:hover {
 .bg-peach{
   background-color: $peach;
 }
-
 
 
 img{
@@ -240,7 +246,7 @@ a.btn{
   &.btn-secondary{
     background-color: $teal;
     &:hover{
-      background-color: $d-teal;
+      background-color: $purple;
       color: $white;
       text-decoration: none;
     }
@@ -251,3 +257,38 @@ a.btn{
 // --------------------------------------------- //
 // ?? WHAT ELSE NEEDS TO BE INCLUDED ??
 // --------------------------------------------- //
+
+@media only screen and (max-width: 1199px){
+
+}
+
+@media only screen and (max-width: 991px){
+  .display-1{
+    font-size: 3rem;
+  }
+  body{
+    font-size: 17px !important;
+  }
+}
+
+@media only screen and (max-width: 767px){
+  body{
+    font-size: 15px !important;
+  }
+  .display-1{
+    font-size: 2.8rem;
+  }
+  .quote{
+    font-size: 1.25rem;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  div#content{
+    section{
+      padding-top: 4rem;
+      padding-bottom: 4rem;
+    }
+  }
+}

@@ -24,8 +24,7 @@ require_once( __DIR__ . '/components/modal.php');
 
 // Sections
 require_once( __DIR__ . '/sections/card-section.php');
-require_once( __DIR__ . '/sections/parent-page-header.php');
-require_once ( __DIR__ . '/sections/child-page-header.php');
+require_once( __DIR__ . '/sections/page-header.php');
 require_once ( __DIR__ . '/sections/grandchild-page-header.php');
 
 
@@ -40,6 +39,7 @@ function register_assets()
 
     wp_enqueue_style('global-styles', get_template_directory_uri() . '/dist/css/global.css', array(), '1.0.0', 'all');
     wp_enqueue_script('global-scripts', get_template_directory_uri() . '/dist/js/global.js', array(), '1.0.0', false);
+    wp_enqueue_script('search-scripts', get_template_directory_uri() . '/dist/js/dynamic-search.js', array(), '1.0.0', false);
 
     //   front page
     if ( is_front_page() ):
@@ -53,6 +53,7 @@ function register_assets()
     //   GRANDchild page
     elseif ( is_page_template('template-grandchild.php') ):
         wp_enqueue_style('grandchild-page-styles', get_template_directory_uri() . '/dist/css/grandchild-page.css', array(), '1.0.0', 'all');
+
 
     endif;
 

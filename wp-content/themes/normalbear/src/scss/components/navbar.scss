@@ -1,7 +1,17 @@
 @import "variables";
 nav.navbar{
   padding: 0;
-  height: 3rem;
+  @media only screen and (min-width: 992px){
+    height: 3rem;
+  }
+
+
+  //nav
+  button.navbar-toggler{
+    i{
+      color: $white;
+    }
+  }
 
   div.navbar-collapse{
     height: 100%;

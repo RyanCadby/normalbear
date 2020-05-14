@@ -9,12 +9,32 @@ section {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right center;
+    position: relative;
 
     .btn-cont {
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  section {
+    &.cta {
+      .row{
+        justify-content: center;
+
+        .col{
+          h2{
+            text-align: center;
+          }
+          p{
+            text-align: center;
+          }
+        }
+      }
     }
   }
 }

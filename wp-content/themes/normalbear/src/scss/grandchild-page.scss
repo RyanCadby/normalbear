@@ -10,36 +10,194 @@
 @import "components/breadcrumb";
 
 section{
-  pre{
-    float: left;
-    width: 35%;
-    left: -200px;
-    position: relative;
-    overflow: visible;
-  }
-  img.alignleft{
-    width: 400px;
-    height: auto;
-    border-radius: 1rem;
-  }
-  p{
-    margin-bottom: 1.5rem;
-  }
+  &.grandchild {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    .grandchild-bod-cont {
+      pre {
+        float: left;
+        width: 35%;
+        left: -200px;
+        position: relative;
+        overflow: visible;
+      }
 
-  pre{
-    margin: 2rem 0 3rem 0;
-    &:before{
-      content: "";
-      width: 3000px;
-      height: 120%;
-      position: absolute;
-      left: -2800px;
-      background: $purple;
-      z-index: -1;
-      top: -10%;
-      border-radius: 1rem;
-      opacity: .2;
+      img.alignleft {
+        width: 400px;
+        height: auto;
+        border-radius: 1rem;
+      }
+
+      p {
+        margin-bottom: 1.5rem;
+
+        &:last-of-type {
+          padding-bottom: 3rem;
+        }
+      }
+
+      pre {
+        margin: 2rem 0 3rem 0;
+
+        &:before {
+          content: "";
+          width: 3000px;
+          height: 120%;
+          position: absolute;
+          left: -2800px;
+          background: $purple;
+          z-index: -1;
+          top: -10%;
+          border-radius: 1rem;
+          opacity: .2;
+        }
+      }
+    }
+  }
+}
+
+.grandchild-content{
+  min-height: 1500px;
+  display: block;
+  position: relative;
+}
+
+.grandchild-sidebar-cont{
+  position: absolute;
+  width: calc(100vw - (((100vw - 1140px) / 2) + 760px + 200px));
+  height: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 2rem;
+
+  .sidebar{
+    margin-bottom: 2rem;
+    h4{
+      font-family: $heading-font-family;
+      color: $white;
+      border-bottom: 2px solid white;
+      font-weight: 700;
+      opacity: .8;
+    }
+    i{
+      color: $white;
+      font-size: 1.4rem;
+      margin-right: .5rem;
+      opacity: .8;
+      &:hover{
+        opacity: 1;
+      }
     }
   }
 
+  .sub-service-menu{
+    li{
+      list-style-type: none;
+      padding: 0;
+      a{
+        opacity: .8;
+        text-transform: capitalize;
+        color: $white;
+        font-family: $heading-font-family;
+        font-weight: 700;
+        font-size: 1.5rem;
+        display: block;
+        border-bottom: 2px solid white;
+        &:hover{
+          opacity: 1;
+          text-decoration: none;
+        }
+      }
+
+      ul{
+        list-style-type: none;
+        padding: 0;
+        li{
+          a{
+            text-transform: capitalize;
+            color: $white;
+            font-family: $heading-font-family;
+            font-weight: 400;
+            font-size: .9rem;
+            border-bottom: none;
+            &:hover{
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .sidebar.about-sidebar{
+    p.about-text{
+      color: $white;
+      opacity: .8;
+      transition: all .25s ease-in-out;
+    }
+
+    div{
+      div{
+        margin-bottom: .5rem;
+      }
+    }
+
+    a{
+      i{
+        font-size: 1rem;
+      }
+      span{
+        color: $white;
+        opacity: .8;
+        text-transform: lowercase;
+        font-size: .8rem;
+        transition: all .25s ease-in-out;
+      }
+      &:hover{
+        text-decoration: none;
+        i{
+          opacity: 1;
+        }
+        span{
+          opacity: 1;
+        }
+        div{
+          p{
+            opacity: 1;
+          }
+        }
+      }
+      &.phone{
+        i{
+          margin-right: 1.2rem;
+        }
+      }
+      &.email{
+        i{
+          margin-right: .75rem;
+        }
+      }
+      &.address{
+        i{
+          margin-right: 1.25rem;
+        }
+      }
+
+      .address-item-cont{
+        p{
+          margin-bottom: .25rem;
+          color: $white;
+          opacity: .8;
+          text-transform: lowercase;
+          font-size: .8rem;
+          line-height: 1;
+          transition: all .25s ease-in-out;
+        }
+      }
+      &.address{
+        display: flex;
+      }
+    }
+  }
 }

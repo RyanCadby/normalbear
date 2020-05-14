@@ -84,3 +84,15 @@ $teal: #2BB5B8;
 $peach: #E5413C;
 $white: #fff;
 $black: #191919;
+
+@media only screen and (max-width: 1199px){
+
+}
+
+@media only screen and (max-width: 991px){
+  $body-size: 17px;
+}
+
+@media only screen and (max-width: 767px){
+  $body-size: 16px;
+}

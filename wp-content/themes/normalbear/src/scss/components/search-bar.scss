@@ -1,0 +1,26 @@
+// -------------------------------------------- //
+//  NAME: SEARCH-BAR.SCSS
+//  VERSION: 1.0
+//  DESCRIPTION:
+// -------------------------------------------- //
+
+section{
+  &.search-section, &.child{
+    padding-top: 3rem !important;
+    padding-bottom: 0 !important;
+
+    input{
+      border-radius: 10rem;
+      border: 2px solid #ccc;
+      width: 100%;
+      padding: .75rem .5rem .75rem 2.25rem;
+      line-height: 1;
+    }
+    i{
+      position: absolute;
+      left: 1.5rem;
+      top: .9rem;
+      color: #ccc;
+    }
+  }
+}

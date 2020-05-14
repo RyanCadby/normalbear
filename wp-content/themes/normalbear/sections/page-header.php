@@ -5,7 +5,7 @@
 // ----- Description: SBC parent page header
 // ----- Instructions: call "parent_page_header()" to print the parent page header
  **/
-function parent_page_header($page_title=null, $desc=null, $bg_img=null, $bg_color=null){
+function page_header($page_title=null, $desc=null, $bg_img=null, $bg_color=null, $heirarchy='parent'){
     if($page_title == null){
         $page_title = get_the_title();
     }
@@ -13,7 +13,7 @@ function parent_page_header($page_title=null, $desc=null, $bg_img=null, $bg_colo
         $desc = get_the_excerpt();
     }
     ?>
-    <section class="parent-header" style="background-image: url('<?php if($bg_img != null): echo $bg_img; endif; ?>'">
+    <section class="<?php echo $heirarchy; ?>-header" style="background-image: url('<?php if($bg_img != null): echo $bg_img; endif; ?>'">
         <!-- full width background - defaults to bg-primary class -->
         <div class="container-fluid <?php echo $bg_color; ?>">
             <!-- content width container -->
@@ -21,10 +21,10 @@ function parent_page_header($page_title=null, $desc=null, $bg_img=null, $bg_colo
                 <div class="row">
                     <div class="col col-12 col-md-8">
                         <?php mj_wp_breadcrumb(); ?>
-                        <h1 class="head parent-head white"><?php echo $page_title; ?></h1>
+                        <h1 class="head <?php echo $heirarchy; ?>-head white"><?php echo $page_title; ?></h1>
                         <?php if($desc): ?>
-                            <div class="parent-desc-cont">
-                                <p class="desc parent-desc white">
+                            <div class="<?php echo $heirarchy; ?>-desc-cont">
+                                <p class="desc <?php echo $heirarchy; ?>-desc white">
                                     <?php echo $desc; ?>
                                 </p>
                             </div>

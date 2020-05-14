@@ -53,7 +53,7 @@ get_header();
 <section class="hero" style="background-image: url('<?php echo $hero_bg; ?>)">
     <div class="container">
         <div class="row">
-            <div class="col col-12 col-sm-6">
+            <div class="col col-12 col-sm-10 col-md-8 col-lg-6">
                 <h1 class="display-1 white"><?php echo $hero_head; ?></h1>
                 <p class="white"><?php echo $hero_sub; ?></p>
                 <div class="btn-cont">
@@ -85,7 +85,7 @@ get_header();
 <?php if(have_rows('services_')): ?>
     <section class="front-page services">
         <div class="container">
-            <div class="row">
+            <div class="row justify-content-center">
                 <?php while( have_rows('services_') ): the_row(); ?>
                 <?php
                     $icon = get_sub_field('img');
@@ -93,7 +93,7 @@ get_header();
                     $desc = get_sub_field('desc');
                     $link = get_sub_field('link');
                 ?>
-                    <div class="col col-12 col-sm-6 col-md-4">
+                    <div class="col col-10 col-sm-6 col-md-4">
                         <a href="<?php echo $link; ?>" class="card service-card">
                             <div class="icon-cont">
                                 <?php
@@ -109,7 +109,7 @@ get_header();
                     </div>
                 <?php endwhile; ?>
             </div>
-            <div class="row pt-4">
+            <div class="row">
                 <div class="col col-12 justify-content-center d-flex">
                     <a href="<?php echo $service_btn_link; ?>" class="btn btn-secondary"><?php echo $service_btn_txt; ?></a>
                 </div>
@@ -121,8 +121,8 @@ get_header();
 <!-- Image Left Section -->
 <section class="img-left p-0">
     <div class="container-fluid p-0">
-        <div class="row">
-            <div class="col col-2 col-md-4 col-lg-6">
+        <div class="row justify-content-center">
+            <div class="col col-12 col-md-4 col-lg-6 d-none d-md-block overflow-hidden">
                 <?php
                 if($img_left):
                     echo wp_get_attachment_image( $img_left, 'medium');
@@ -130,7 +130,7 @@ get_header();
                     echo '<img src="' . get_template_directory_uri() . '/dist/images/placeholder.jpg">';
                 endif;?>
             </div>
-            <div class="col col-10 col-md-8 col-lg-6 bod">
+            <div class="col col-12 col-md-8 col-lg-6 bod">
                 <h2 class="d-teal"><?php echo $img_left_head; ?></h2>
                 <p class="quote teal"><?php echo $img_left_sub; ?></p>
                 <p><?php echo $img_left_desc; ?></p>
@@ -140,7 +140,7 @@ get_header();
 </section>
 
 <!-- CTA Section -->
-<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>'">
+<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>')">
     <div class="container">
         <div class="row">
             <div class="col col-12 col-md-6">
@@ -154,6 +154,7 @@ get_header();
     </div>
 </section>
 
+
 <!-- Portfolio Section -->
 <section class="portfolio" id="portfolio">
     <div class="container-fluid">
@@ -165,7 +166,7 @@ get_header();
         <?php if(have_rows('portfolio_') ): ?>
         <div class="row">
             <?php while( have_rows('portfolio_') ): the_row(); ?>
-            <div class="col col-sm-6 col-md-4">
+            <div class="col col-12 col-sm-6 col-md-4">
                 <?php
                 $img = get_sub_field('img');
                 if($img):

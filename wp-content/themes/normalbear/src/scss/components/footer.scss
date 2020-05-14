@@ -4,9 +4,12 @@
 //  DESCRIPTION:
 // -------------------------------------------- //
 @import "variables";
-
+footer{
+  position: relative;
+}
 section{
   &.footer{
+    background-color: white;
     .col{
       margin-top: 1.2rem;
       &:first-of-type{
@@ -76,6 +79,26 @@ section{
         div.address-item-cont{
           padding-left: 1.8rem;
           font-size: .8rem;
+          p{
+            margin-bottom: .25rem;
+            line-height: 1;
+          }
+        }
+      }
+    }
+
+    .connect-widget{
+      .head{
+        margin-bottom: .25rem;
+      }
+      a{
+        color: $d-teal;
+        font-size: 1.4rem;
+        &:hover{
+          color: $purple;
+        }
+        i{
+          margin-right: .5rem;
         }
       }
     }
@@ -85,5 +108,25 @@ section{
     padding: 1rem 0;
     background-color: $d-navy;
     color: white;
+  }
+}
+
+@media only screen and (max-width: 575px){
+  section{
+    &.footer{
+      .col{
+        margin-bottom: 1rem;
+        &:last-of-type{
+          margin-bottom: 0;
+        }
+
+        h4{
+          margin-bottom: .5rem;
+        }
+      }
+      .footer-nav-cont{
+        padding-left: 15px;
+      }
+    }
   }
 }

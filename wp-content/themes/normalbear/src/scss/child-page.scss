@@ -7,6 +7,7 @@
 @import 'components/child-header';
 @import "components/cta";
 @import "components/portfolio";
+@import "components/search-bar";
 
 section{
   // Sub meenu section
@@ -35,6 +36,7 @@ section{
 
   // child services section
   &.child-services {
+    padding-top: 2rem !important;
     .row {
       padding-top: 2rem;
       padding-bottom: 2rem;
@@ -44,8 +46,13 @@ section{
         flex-direction: column;
         justify-content: center;
 
-        h2{
+        a.child-service-link{
+          text-transform: capitalize;
           color: $purple;
+          &:hover{
+            text-decoration: none;
+            color: $teal
+          }
         }
         .quote{
           color: $purple;
@@ -120,4 +127,65 @@ section{
       }
     }
   }
+}
+
+div.child-service-main-cont{
+  background-image: url("//localhost/normalbear/wp-content/themes/normalbear/dist/images/child-service-topo-bg-1.png");
+  background-size: initial;
+  background-position-x: -400px;
+  background-repeat: repeat-y;
+}
+section.child-services{
+  background-image: url("//localhost/normalbear/wp-content/themes/normalbear/dist/images/child-service-topo-bg-2.png");
+  background-size: initial;
+  background-position-x: calc(100vw - 300px);
+  background-repeat: repeat-y;
+}
+
+@media only screen and (max-width: 1199px){
+
+}
+
+@media only screen and (max-width: 991px) {
+
+}
+
+@media only screen and (max-width: 767px){
+  div#page{
+    section {
+      &.child-services {
+        padding-top: 2rem;
+
+        .container {
+          .row {
+            .col {
+              &.child-service-img-cont {
+                position: absolute;
+                z-index: 99;
+
+                a {
+                  position: absolute;
+                  left: 15px;
+                  height: 5rem;
+                  width: 5rem;
+                }
+              }
+
+              .child-service-link {
+                margin-left: 6rem;
+              }
+
+              p.quote {
+                margin-left: 6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px){
+
 }

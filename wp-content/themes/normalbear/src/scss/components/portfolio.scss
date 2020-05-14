@@ -7,6 +7,18 @@
 section{
   &.portfolio{
     padding: 0;
+
+    h2 {
+      position: relative;
+      &:before {
+        content: url("//localhost/normalbear/wp-content/themes/normalbear/dist/images/comet-1.png");
+        position: absolute;
+        left: -150px;
+        top: -40px;
+        z-index: -1;
+      }
+    }
+
     .row{
       padding: 0;
 
@@ -41,6 +53,23 @@ section{
       opacity: 0;
       top: 0;
       left: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  section {
+    &.portfolio {
+      h2 {
+        &:before {
+          left: -80px;
+        }
+      }
+    }
+
+    &.portfolio#portfolio {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 }

@@ -30,19 +30,19 @@ $zip = $about['zip'];
     <section class="footer">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-sm-6 col-md-3">
+                <div class="col col-12 col-sm-6 col-lg-3">
                     <img class="logo footer-logo mb-3" src="<?php echo get_template_directory_uri() . '/dist/images/nb-logo-hor-blk.png'; ?>" alt="Normal Bear Logo">
                     <?php if ( is_active_sidebar( 'left-col' ) ) : ?>
                         <?php dynamic_sidebar( 'left-col' ); ?>
                     <?php endif; ?>
                     <a class="btn btn-primary mt-3" href="<?php echo get_template_directory_uri() . '/contact'?>">Let's Talk.</a>
                 </div>
-                <div class="col col-12 col-md-6 col-lg-3 footer-nav-cont">
+                <div class="col col-12 col-sm-6 col-md-6 col-lg-3 footer-nav-cont">
                     <?php if ( is_active_sidebar( 'center-col' ) ) : ?>
                         <?php dynamic_sidebar( 'center-col' ); ?>
                     <?php endif; ?>
                 </div>
-                <div class="col col-12 col-sm-6 col-md-3 footer-contact-cont">
+                <div class="col col-12 col-sm-6 col-lg-4 footer-contact-cont">
                     <h4>Contact</h4>
                     <?php if($phone): ?>
                         <div class="phone-cont">
@@ -66,7 +66,7 @@ $zip = $about['zip'];
                     </div>
 
                 </div>
-                <div class="col col-12 col-sm-6 col-md-3">
+                <div class="col col-12 col-sm-6 col-lg-2">
                     <h4>Subscribe</h4>
                     <div class="email-input"></div>
                     <?php if ( is_active_sidebar( 'right-col' ) ) : ?>

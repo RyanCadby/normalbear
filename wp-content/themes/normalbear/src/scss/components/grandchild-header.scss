@@ -6,8 +6,8 @@
 @import "variables";
 
 section{
-  padding-bottom: 0;
   &.grandchild-header{
+    padding-bottom: 0;
     &:before{
       content: "";
       height: 9rem;

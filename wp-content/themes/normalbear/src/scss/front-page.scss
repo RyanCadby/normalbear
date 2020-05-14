@@ -9,13 +9,13 @@
 
 section{
   &.hero{
-    padding: 10rem 0;
+    padding: 10rem 0 5rem 0;
 
     img.landing-line{
       width: 10px;
-      height: 510px;
+      height: 420px;
       position: absolute;
-      top: 15rem;
+      top: 10rem;
       left: calc(50% - 580px);
     }
     .col{
@@ -49,6 +49,7 @@ section{
       text-align: center;
       text-decoration: none;
       border-radius: .5rem;
+      margin-bottom: 2rem;
 
       .icon-cont{
         width: auto;
@@ -95,3 +96,88 @@ section{
 
 }
 
+@media only screen and (max-width: 1199px){
+  div#content{
+    section{
+      &.hero{
+        padding: 8rem 0 5rem 0;
+        .container {
+          .row {
+            img.accent {
+              left: calc(50% - 500px);
+              top: 8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  div#content{
+    section {
+      &.hero {
+        .container {
+          .row {
+            img.accent {
+              left: calc(50% - 380px);
+            }
+          }
+        }
+      }
+
+      &.img-left{
+        .bod{
+          padding: 3rem 30px;
+        }
+        img{
+          width: auto;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 767px){
+  div#content{
+    section{
+      &.hero {
+        padding: 7rem 0 3rem 0;
+        .container {
+          .row {
+            img.accent {
+              left: calc(50% - 280px);
+            }
+          }
+        }
+      }
+
+      &.title-left{
+        background-size: cover;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px){
+  div#content{
+    section{
+      &.hero {
+        padding: 5rem 0;
+        .container {
+          .row {
+            img.accent {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &.services{
+        background-position-x: -100px;
+      }
+    }
+  }
+}
