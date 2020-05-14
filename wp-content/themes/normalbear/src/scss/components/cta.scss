@@ -16,6 +16,11 @@ section {
       flex-direction: row;
       align-items: center;
       justify-content: center;
+
+      .btn-cta{
+        padding: .75rem 2.5rem;
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -32,6 +37,7 @@ section {
           }
           p{
             text-align: center;
+            font-size: 1rem;
           }
         }
       }

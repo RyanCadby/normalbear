@@ -17,6 +17,7 @@ $cta_btn_link = $cta['link'];
 $cta_btn_txt = $cta['txt'];
 $cta_bg = $cta['bg_img'];
 if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'; endif;
+$cta_btn_color = $cta['btn_color'];
 ?>
 
 <div class="grandchild-content">
@@ -46,19 +47,8 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
     </div>
 </div>
 
-<!-- CTA Section -->
-<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>')">
-    <div class="container">
-        <div class="row">
-            <div class="col col-12 col-md-6">
-                <h2 class="white"><?php echo $cta_head; ?></h2>
-                <p class="white"><?php echo $cta_sub; ?></p>
-            </div>
-            <div class="col col-12 col-md-6 btn-cont">
-                <a class="btn btn-primary" href="<?php echo get_template_directory_uri() . $cta_btn_link; ?>"><?php echo $cta_btn_txt; ?></a>
-            </div>
-        </div>
-    </div>
-</section>
+<?php cta($id); ?>
+
+
 
 <?php get_footer(); ?>

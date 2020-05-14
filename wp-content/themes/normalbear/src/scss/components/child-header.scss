@@ -6,6 +6,12 @@
 @import 'variables';
 @import 'breadcrumb';
 
+div#content{
+  section.parent-header, section.child-header{
+    paddint-top: 8rem;
+  }
+}
+
 h1.child-head {
   position: relative;
 
@@ -29,6 +35,14 @@ nav#breadcrumb-nav{
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 575px){
+  div#content{
+    section.parent-header, section.child-header{
+      paddint-top: 4rem;
     }
   }
 }

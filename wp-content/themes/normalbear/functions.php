@@ -26,6 +26,7 @@ require_once( __DIR__ . '/components/modal.php');
 require_once( __DIR__ . '/sections/card-section.php');
 require_once( __DIR__ . '/sections/page-header.php');
 require_once ( __DIR__ . '/sections/grandchild-page-header.php');
+require_once ( __DIR__ . '/sections/cta.php');
 
 
 // Enqueue Styles and Scripts based on page template

@@ -140,19 +140,7 @@ get_header();
 </section>
 
 <!-- CTA Section -->
-<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>')">
-    <div class="container">
-        <div class="row">
-            <div class="col col-12 col-md-6">
-                <h2 class="white"><?php echo $cta_head; ?></h2>
-                <p class="white"><?php echo $cta_sub; ?></p>
-            </div>
-            <div class="col col-12 col-md-6 btn-cont">
-                <a class="btn btn-primary" href="<?php echo get_template_directory_uri() . $cta_btn_link; ?>"><?php echo $cta_btn_txt; ?></a>
-            </div>
-        </div>
-    </div>
-</section>
+<?php cta($id); ?>
 
 
 <!-- Portfolio Section -->

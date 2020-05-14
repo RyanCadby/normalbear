@@ -162,7 +162,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
         <?php if(have_rows('portfolio_') ): ?>
             <div class="row">
                 <?php while( have_rows('portfolio_') ): the_row(); ?>
-                    <div class="col col-sm-6 col-md-4">
+                    <div class="col col-12 col-sm-6 col-md-4">
                         <?php
                         $img = get_sub_field('img');
                         if($img):
@@ -218,18 +218,6 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
 
 
 <!-- CTA Section -->
-<section class="cta" style="background-image: url('<?php echo $cta_bg; ?>'">
-    <div class="container">
-        <div class="row">
-            <div class="col col-12 col-md-6">
-                <h2 class="white"><?php echo $cta_head; ?></h2>
-                <p class="white"><?php echo $cta_sub; ?></p>
-            </div>
-            <div class="col col-12 col-md-6 btn-cont">
-                <a class="btn btn-primary" href="<?php echo get_template_directory_uri() . $cta_btn_link; ?>"><?php echo $cta_btn_txt; ?></a>
-            </div>
-        </div>
-    </div>
-</section>
+<?php cta($id); ?>
 
 <?php get_footer(); ?>

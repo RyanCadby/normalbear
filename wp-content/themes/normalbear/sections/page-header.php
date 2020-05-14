@@ -13,7 +13,7 @@ function page_header($page_title=null, $desc=null, $bg_img=null, $bg_color=null,
         $desc = get_the_excerpt();
     }
     ?>
-    <section class="<?php echo $heirarchy; ?>-header" style="background-image: url('<?php if($bg_img != null): echo $bg_img; endif; ?>'">
+    <section class="<?php echo $heirarchy; ?>-header" style="background-image: url('<?php if($bg_img != null): echo $bg_img; endif; ?>')">
         <!-- full width background - defaults to bg-primary class -->
         <div class="container-fluid <?php echo $bg_color; ?>">
             <!-- content width container -->

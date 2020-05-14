@@ -91,6 +91,7 @@ h6, .h6 {
 .quote {
   font-size: $quote-font-size;
   font-family: 'Comfortaa', sans-serif;
+  font-weight: 300;
 }
 
 p, .p {
@@ -234,6 +235,9 @@ a.btn{
   font-family: $heading-font-family;
   font-weight: 600;
   font-size: .8rem;
+  &:hover{
+    text-decoration: none;
+  }
 
   &.btn-primary{
     background-color: $peach;
@@ -249,6 +253,24 @@ a.btn{
       background-color: $purple;
       color: $white;
       text-decoration: none;
+    }
+  }
+  &.btn-purple{
+    background-color: $purple;
+    &:hover{
+      background-color: $teal;
+    }
+  }
+  &.btn-teal{
+    background-color: $teal;
+    &:hover{
+      background-color: $peach;
+    }
+  }
+  &.btn-peach{
+    background-color: $peach;
+    &:hover{
+      background-color: $purple;
     }
   }
 }

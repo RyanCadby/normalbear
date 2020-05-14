@@ -21,6 +21,18 @@ msgstr ""
 msgid "Blog Category Index Page"
 msgstr ""
 
+#: template-child.php:3, bundled/template-child.php:3
+msgid "Child Template"
+msgstr ""
+
 #: template-default.php:3, bundled/template-default.php:3
-msgid "Default"
+msgid "Default SBC"
+msgstr ""
+
+#: template-grandchild.php:3, bundled/template-grandchild.php:3
+msgid "Grand Child Template"
+msgstr ""
+
+#: template-parent.php:3, bundled/template-parent.php:3
+msgid "Parent Template"
 msgstr ""

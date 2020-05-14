@@ -15,7 +15,7 @@ section{
       width: 10px;
       height: 420px;
       position: absolute;
-      top: 10rem;
+      top: 10.5rem;
       left: calc(50% - 580px);
     }
     .col{
@@ -90,10 +90,41 @@ section{
         display: flex;
         flex-direction: column;
         justify-content: center;
+
+        h2, p{
+          max-width: 560px;
+        }
       }
     }
   }
 
+}
+
+// cta
+body.home{
+  section.cta{
+    h2:before{
+      content: "";
+      height: 13rem;
+      width: 10px;
+      position: absolute;
+      left: calc(50% - 300px);
+      background: white;
+      top: -10rem;
+    }
+    .container:before{
+      content: "";
+      position: absolute;
+      height: 200px;
+      width: 200px;
+      top: -8rem;
+      z-index: 999;
+      left: 0;
+      background-image: url(/wp-content/themes/normalbear/dist/images/planet-1.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
 }
 
 @media only screen and (max-width: 1199px){
