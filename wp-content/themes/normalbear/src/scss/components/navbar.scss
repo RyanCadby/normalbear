@@ -2,7 +2,8 @@
 nav.navbar{
   padding: 0;
   @media only screen and (min-width: 992px){
-    height: 3rem;
+    transition: height .35s;
+    height: 5rem;
   }
 
 
@@ -59,8 +60,20 @@ nav.navbar{
   .nav-logo {
     max-width: 200px;
   }
+}
 
+section#navbar-section{
 
+}
+.sticky{
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
+
+  .navbar{
+    height: 3rem;
+  }
 }
 
 @media only screen and (max-width: 991px){

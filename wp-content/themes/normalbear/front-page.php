@@ -50,12 +50,12 @@ get_header();
 
 
 ?>
-<section class="hero" style="background-image: url('<?php echo $hero_bg; ?>)">
+<section class="hero" style="background-image: url('<?php echo $hero_bg; ?>')">
     <div class="container">
         <div class="row">
-            <div class="col col-12 col-sm-10 col-md-8 col-lg-6">
+            <div class="col col-12 col-sm-10 col-md-8">
                 <h1 class="display-1 white"><?php echo $hero_head; ?></h1>
-                <p class="white"><?php echo $hero_sub; ?></p>
+                <p class="white quote"><?php echo $hero_sub; ?></p>
                 <div class="btn-cont">
                     <a class="btn btn-primary" href="<?php echo $hero_btn_link; ?>"><?php echo $hero_btn_txt; ?></a>
                 </div>

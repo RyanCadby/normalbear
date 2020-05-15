@@ -39,7 +39,7 @@ $logo_size = 'medium';
 <!-- START PAGE -->
 <div id="page">
 
-    <section class="bg-navy nav-section">
+    <section class="bg-navy nav-section" id="navbar-section">
         <div class="container">
 
             <!--    Start Nav Bar   -->

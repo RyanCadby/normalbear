@@ -1,0 +1,40 @@
+@keyframes animDecorationHeight {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 440px;
+  }
+}
+
+@keyframes animTextRight {
+   0%{
+     margin-left: -20px;
+     opacity: 0;
+   }
+   100%{
+     margin-left: 0;
+     opacity: 1;
+   }
+ }
+
+@keyframes animOpacity {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+
+@keyframes animUp {
+  0%{
+    margin-bottom: -20px;
+    opacity: 0;
+  }
+  100%{
+    margin-bottom: 0;
+    opacity: 1;
+  }
+}

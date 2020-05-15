@@ -6,17 +6,32 @@
 
 @import 'components/variables';
 @import "components/portfolio";
+@import "components/animations";
+
 
 section{
   &.hero{
     padding: 10rem 0 5rem 0;
 
+    h1{
+      opacity: 0;
+      animation: 1s ease-out .25s 1 animTextRight forwards;
+    }
+    p{
+      opacity: 0;
+      animation: 1s ease-out .5s 1 animTextRight forwards;
+    }
+    .btn{
+      opacity: 0;
+      animation: 1s ease-out .75s 1 animOpacity forwards;
+    }
+
     img.landing-line{
       width: 10px;
-      height: 420px;
+      height: 440px;
       position: absolute;
-      top: 10.5rem;
       left: calc(50% - 580px);
+      animation: 1.2s ease-out 0s 1 animDecorationHeight;
     }
     .col{
       display: flex;
@@ -30,6 +45,15 @@ section{
     background-position: right center;
     background-color: white;
     background-repeat: no-repeat;
+
+    h2{
+      opacity: 0;
+      animation: 1s ease-out 1s 1 animTextRight forwards;
+    }
+    p{
+      opacity: 0;
+      animation: 1s ease-out 1.2s 1 animTextRight forwards;
+    }
   }
 
   //--------------- Services Section ----------------//
@@ -108,8 +132,8 @@ body.home{
       height: 13rem;
       width: 10px;
       position: absolute;
-      left: calc(50% - 300px);
-      background: white;
+      left: calc(50% - 400px);
+      background: #fff;
       top: -10rem;
     }
     .container:before{
@@ -120,7 +144,7 @@ body.home{
       top: -8rem;
       z-index: 999;
       left: 0;
-      background-image: url(/wp-content/themes/normalbear/dist/images/planet-1.png);
+      background-image: url(http://localhost/normalbear/wp-content/themes/normalbear/dist/images/planet-1.png);
       background-size: contain;
       background-repeat: no-repeat;
     }
