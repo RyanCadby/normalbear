@@ -32,6 +32,7 @@ section{
         margin-bottom: 1.5rem;
 
         &:last-of-type {
+          margin-bottom: 0;
           padding-bottom: 3rem;
         }
       }
@@ -57,14 +58,15 @@ section{
 }
 
 .grandchild-content{
-  min-height: 1500px;
   display: block;
   position: relative;
 }
 
 .grandchild-sidebar-cont{
   position: absolute;
-  width: calc(100vw - (((100vw - 1140px) / 2) + 760px + 200px));
+  //width: calc(100vw - (((100vw - 1140px) / 2) + 760px + 200px));
+  max-width: 350px;
+  width: 350px;
   height: 100%;
   top: 0;
   right: 0;
@@ -197,6 +199,34 @@ section{
       }
       &.address{
         display: flex;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  section.grandchild .grandchild-bod-cont p:last-of-type{
+    paddinb-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  section{
+    &.grandchild{
+      padding-top: 0 !important;
+      .grandchild-bod-cont{
+        pre{
+          left: 0;
+          position: relative;
+          overflow: visible;
+          clear: both;
+          float: unset;
+          width: 100%;
+
+          img{
+            width: 100%;
+          }
+        }
       }
     }
   }

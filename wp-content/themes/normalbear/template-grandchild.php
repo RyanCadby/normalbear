@@ -27,7 +27,7 @@ $cta_btn_color = $cta['btn_color'];
     <section class="grandchild">
         <div class="container">
             <div class="row">
-                <div class="col col-12 col-md-8 grandchild-bod-cont">
+                <div class="col col-12 col-lg-8 grandchild-bod-cont">
                     <?php
                     wp_reset_query();
                     the_content();

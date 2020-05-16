@@ -3,3 +3,57 @@
 //  VERSION: 1.0
 //  DESCRIPTION:
 // -------------------------------------------- //
+
+div.grandchild-sidebar-cont{
+  .grandchild-sidebar-wrap{
+    li{
+      a{
+        line-height: 1.2;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 991px){
+  div.grandchild-sidebar-cont{
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    .grandchild-sidebar-wrap{
+      display: flex;
+      flex-direction: row;
+      div.sidebar{
+        padding: 0 1rem;
+        &.contact-info{
+          padding: 0;
+        }
+        &.sub-service-menu{
+          margin-bottom: .5rem;
+        }
+
+        li{
+          a{
+            line-height: 1.2;
+            margin-bottom: .5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  div.grandchild-sidebar-cont{
+    div.grandchild-sidebar-wrap{
+      flex-direction: column;
+
+      div.sidebar.about-sidebar{
+        margin-bottom: 0;
+
+        div.sidebar.contact-info{
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

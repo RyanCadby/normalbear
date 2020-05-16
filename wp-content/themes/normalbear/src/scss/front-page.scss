@@ -11,7 +11,7 @@
 
 section{
   &.hero{
-    padding: 10rem 0 5rem 0;
+    padding: 15rem 0 7rem 0;
 
     h1{
       opacity: 0;
@@ -28,10 +28,9 @@ section{
 
     img.landing-line{
       width: 10px;
-      height: 440px;
       position: absolute;
       left: calc(50% - 580px);
-      animation: 1.2s ease-out 0s 1 animDecorationHeight;
+      animation: 1.2s ease-out 0s 1 animDecorationHeight forwards;
     }
     .col{
       display: flex;

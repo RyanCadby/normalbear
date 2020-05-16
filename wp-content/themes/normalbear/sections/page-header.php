@@ -24,7 +24,7 @@ function page_header($page_title=null, $desc=null, $bg_img=null, $bg_color=null,
                         <h1 class="head <?php echo $heirarchy; ?>-head white"><?php echo $page_title; ?></h1>
                         <?php if($desc): ?>
                             <div class="<?php echo $heirarchy; ?>-desc-cont">
-                                <p class="desc <?php echo $heirarchy; ?>-desc white">
+                                <p class="desc quote <?php echo $heirarchy; ?>-desc white">
                                     <?php echo $desc; ?>
                                 </p>
                             </div>

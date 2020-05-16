@@ -223,7 +223,6 @@ section{
 }
 a.btn{
   border-radius: 50px;
-  padding: .65rem 1.5rem;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
@@ -234,7 +233,8 @@ a.btn{
   width: auto;
   font-family: $heading-font-family;
   font-weight: 600;
-  font-size: .8rem;
+  padding: .75rem 2.5rem;
+  font-size: 1rem;
   &:hover{
     text-decoration: none;
   }

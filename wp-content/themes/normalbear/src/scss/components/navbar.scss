@@ -94,4 +94,15 @@ section#navbar-section{
       }
     }
   }
+
+  .sticky{
+    position: relative;
+
+    .navbar{
+      //height: 3rem;
+    }
+  }
+  #content{
+    padding-top: 0 !important;
+  }
 }

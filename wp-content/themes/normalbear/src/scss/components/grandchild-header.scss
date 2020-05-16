@@ -7,10 +7,9 @@
 
 section{
   &.grandchild-header{
-    padding-bottom: 0;
     &:before{
       content: "";
-      height: 9rem;
+      height: 10rem;
       width: 10px;
       position: absolute;
       top: 0;
@@ -42,6 +41,20 @@ section{
       position: absolute;
       left: calc(50% - 700px);
       top: 5rem;
+    }
+  }
+
+  &.grandchild{
+    padding-top: 0;
+  }
+}
+
+@media only screen and (max-width: 1199px){
+  section{
+    &.grandchild-header{
+      &:before{
+        left: calc(50% - 490px);
+      }
     }
   }
 }
