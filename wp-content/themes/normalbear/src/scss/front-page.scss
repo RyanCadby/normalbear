@@ -13,13 +13,9 @@ section{
   &.hero{
     padding: 15rem 0 7rem 0;
 
-    h1{
+    .col{
       opacity: 0;
-      animation: 1s ease-out .25s 1 animTextRight forwards;
-    }
-    p{
-      opacity: 0;
-      animation: 1s ease-out .5s 1 animTextRight forwards;
+      animation: 1s ease-out .25s 1 animObjRight forwards;
     }
     .btn{
       opacity: 0;
@@ -45,13 +41,13 @@ section{
     background-color: white;
     background-repeat: no-repeat;
 
-    h2{
+    .col{
       opacity: 0;
-      animation: 1s ease-out 1s 1 animTextRight forwards;
+      animation: 1s ease-out 1s 1 animObjRight forwards;
     }
-    p{
+    .col-md-8{
       opacity: 0;
-      animation: 1s ease-out 1.2s 1 animTextRight forwards;
+      animation: 1.4s ease-out 1.2s 1 animObjRight forwards;
     }
   }
 
@@ -128,13 +124,14 @@ body.home{
   section.cta{
     h2:before{
       content: "";
-      height: 13rem;
+      height: 12.5rem;
       width: 10px;
       position: absolute;
       left: calc(50% - 400px);
       background: #fff;
       top: -10rem;
     }
+
     .container:before{
       content: "";
       position: absolute;

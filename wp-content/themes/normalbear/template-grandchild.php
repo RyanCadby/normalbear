@@ -37,7 +37,7 @@ $cta_btn_color = $cta['btn_color'];
         </div>
     </section>
 
-    <div class="grandchild-sidebar-cont bg-l-navy">
+    <div class="grandchild-sidebar-cont bg-l-navy animate" animate="left">
         <div class="grandchild-sidebar-wrap">
             <?php if ( is_active_sidebar( 'service-sidebar' ) ) : ?>
                 <?php dynamic_sidebar( 'service-sidebar' ); ?>

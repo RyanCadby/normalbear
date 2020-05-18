@@ -17,7 +17,14 @@
     <!-- Link Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Montserrat:wght@400;500;600;700&family=Open+Sans&display=swap" rel="stylesheet">
 
+    <!-- Link Animation Library -->
+    <script src="https://unpkg.com/scrollreveal@4"></script>
 
+    <!-- Link Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <!-- Link Jquery -->
+<!--    <script type='text/javascript' src='https://code.jquery.com/jquery-3.4.1.min.js?ver=3.4.1'></script>-->
     <!-- Link included files and stylesheets -->
 <!--    <script src="https://kit.fontawesome.com/70e2c44acf.js" crossorigin="anonymous"></script>-->
 

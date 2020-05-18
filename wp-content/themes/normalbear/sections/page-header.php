@@ -21,9 +21,9 @@ function page_header($page_title=null, $desc=null, $bg_img=null, $bg_color=null,
                 <div class="row">
                     <div class="col col-12 col-md-8">
                         <?php mj_wp_breadcrumb(); ?>
-                        <h1 class="head <?php echo $heirarchy; ?>-head white"><?php echo $page_title; ?></h1>
+                        <h1 class="head <?php echo $heirarchy; ?>-head white animate" animate="right"><?php echo $page_title; ?></h1>
                         <?php if($desc): ?>
-                            <div class="<?php echo $heirarchy; ?>-desc-cont">
+                            <div class="<?php echo $heirarchy; ?>-desc-cont animate" animate="right">
                                 <p class="desc quote <?php echo $heirarchy; ?>-desc white">
                                     <?php echo $desc; ?>
                                 </p>

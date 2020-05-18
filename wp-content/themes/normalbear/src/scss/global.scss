@@ -30,6 +30,7 @@
 @import "./components/cards";
 @import "./components/navbar";
 @import "./components/cta";
+@import "./components/animations";
 
 // --------------------------------------------- //
 // SECTION 1 - TYPE
@@ -211,9 +212,39 @@ section{
 // --------------------------------------------- //
 // SECTION 3 - COLOR UTILITIES
 // --------------------------------------------- //
-// instead of using color specific class, use bootstrap specific classes
-// i.e. primary-bg or primary // secondary-bg or secondary
-
+.animate{
+  opacity: 0;
+  //transition: opacity 1s ease-out;
+}
+.anim-txt-right{
+  animation: 1s ease-out 0s 1 animRight forwards;
+  opacity: 1;
+}
+.anim-obj-right{
+  animation: 1s ease-out 0s 1 animObjRight forwards;
+  opacity: 1;
+}
+.anim-right{
+  animation: 1s ease-out 0s 1 animRight forwards;
+  //opacity: 1;
+  &.head{
+    animation: 1s ease-out 0s 1 animRight forwards;
+    //opacity: 1;
+  }
+}
+.anim-left{
+  animation: 1s ease-out 0s 1 animLeft forwards;
+}
+.anim-in{
+  animation: 1s ease-out 0s 1 animOpacity forwards;
+  opacity: 1;
+}
+h2.anim-height-before {
+  opacity: 1;
+  &:before {
+    animation: 1s ease-out 0s 1 animCtaDecoration forwards;
+  }
+}
 
 // --------------------------------------------- //
 // SECTION 4 - BUTTONS

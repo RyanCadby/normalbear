@@ -131,9 +131,9 @@ get_header();
                 endif;?>
             </div>
             <div class="col col-12 col-md-8 col-lg-6 bod">
-                <h2 class="d-teal"><?php echo $img_left_head; ?></h2>
-                <p class="quote teal"><?php echo $img_left_sub; ?></p>
-                <p><?php echo $img_left_desc; ?></p>
+                <h2 class="d-teal animate" animate="right"><?php echo $img_left_head; ?></h2>
+                <p class="quote teal animate" animate="right"><?php echo $img_left_sub; ?></p>
+                <p class="animate" animate="right"><?php echo $img_left_desc; ?></p>
             </div>
         </div>
     </div>
@@ -154,7 +154,7 @@ get_header();
         <?php if(have_rows('portfolio_') ): ?>
         <div class="row">
             <?php while( have_rows('portfolio_') ): the_row(); ?>
-            <div class="col col-12 col-sm-6 col-md-4">
+            <div class="col col-12 col-sm-6 col-md-4 portfolio-item">
                 <?php
                 $img = get_sub_field('img');
                 if($img):

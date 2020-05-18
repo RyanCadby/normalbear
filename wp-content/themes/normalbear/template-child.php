@@ -104,7 +104,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
 //                    $target = str_replace(' ', '-', $target);
                     ?>
                     <div class="row img-right child-service-row" target="<?php echo $target; ?>">
-                        <div class="col col-12 col-md-7 child-service-cont">
+                        <div class="col col-12 col-md-7 child-service-cont animate" animate="objRight">
                             <a href="<?php echo $link; ?>" class="child-service-link">
                                 <h3 class="head child-service-head"><?php echo $head; ?></h3>
                             </a>
@@ -115,7 +115,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
                                 <i class="fas fa-chevron-circle-right"></i>
                             </a>
                         </div>
-                        <div class="col col-12 col-sm-3 col-md-5 child-service-img-cont">
+                        <div class="col col-12 col-sm-3 col-md-5 child-service-img-cont animate" animate="in">
                             <a href="<?php echo $link; ?>" class="icon-link" style="background-image:url('<?php echo $bg; ?>')">
                                 <?php if($icon): echo wp_get_attachment_image( $icon, 'medium', array( "class" => "child-service-icon" ) ); endif; ?>
                             </a>
@@ -132,12 +132,12 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
                     $target = strtolower($head);
                     ?>
                     <div class="row img-left child-service-row" target="<?php echo $target; ?>">
-                        <div class="col col-12 col-sm-3 col-md-5 child-service-img-cont">
+                        <div class="col col-12 col-sm-3 col-md-5 child-service-img-cont animate" animate="in">
                             <a href="<?php echo $link; ?>" class="icon-link" style="background-image:url('<?php echo $bg; ?>')">
                                 <?php if($icon): echo wp_get_attachment_image( $icon, 'medium', array( "class" => "child-service-icon" ) ); endif; ?>
                             </a>
                         </div>
-                        <div class="col col-12 col-md-7 child-service-cont">
+                        <div class="col col-12 col-md-7 child-service-cont animate" animate="left">
                             <a href="<?php echo $link; ?>" class="child-service-link">
                                 <h3 class="head child-service-head"><?php echo $head; ?></h3>
                             </a>
@@ -162,7 +162,7 @@ if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'
         <?php if(have_rows('portfolio_') ): ?>
             <div class="row">
                 <?php while( have_rows('portfolio_') ): the_row(); ?>
-                    <div class="col col-12 col-sm-6 col-md-4">
+                    <div class="col col-12 col-sm-6 col-md-4 portfolio-item">
                         <?php
                         $img = get_sub_field('img');
                         if($img):

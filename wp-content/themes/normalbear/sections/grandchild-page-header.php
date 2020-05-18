@@ -1,4 +1,3 @@
-
 <?php
 /** GRANDCHILD-PAGE-HEADER.PHP
 // ----- Version: 1.0
@@ -22,9 +21,9 @@ function grandchild_page_header($id=null, $page_title=null){
         <div class="container">
             <?php if($feat_img): echo $feat_img; endif;?>
             <div class="row">
-                <div class="col col-12">
+                <div class="col col-12 col-lg-8">
                     <?php mj_wp_breadcrumb(); ?>
-                    <h1 class="head grandchild-head"><?php echo $page_title; ?></h1>
+                    <h1 class="head grandchild-head animate" animate="in"><?php echo $page_title; ?></h1>
                 </div>
             </div>
         </div>
