@@ -27,6 +27,7 @@ require_once( __DIR__ . '/sections/card-section.php');
 require_once( __DIR__ . '/sections/page-header.php');
 require_once ( __DIR__ . '/sections/grandchild-page-header.php');
 require_once ( __DIR__ . '/sections/cta.php');
+require_once ( __DIR__ . '/sections/search-bar.php');
 
 
 // Enqueue Styles and Scripts based on page template
@@ -43,20 +44,20 @@ function register_assets()
     wp_enqueue_script('search-scripts', get_template_directory_uri() . '/dist/js/dynamic-search.js', array(), '1.0.0', false);
 
     //   front page
-    if ( is_front_page() ):
+//    if ( is_front_page() ):
         wp_enqueue_style('front-page-styles', get_template_directory_uri() . '/dist/css/front-page.css', array(), '1.0.0', 'all');
     //   parent page / service index page
-    elseif ( is_page_template('template-parent.php') ):
+//    elseif ( is_page_template('template-parent.php') ):
         wp_enqueue_style('parent-page-styles', get_template_directory_uri() . '/dist/css/parent-page.css', array(), '1.0.0', 'all');
     //   child page
-    elseif ( is_page_template('template-child.php') ):
+//    elseif ( is_page_template('template-child.php') ):
         wp_enqueue_style('child-page-styles', get_template_directory_uri() . '/dist/css/child-page.css', array(), '1.0.0', 'all');
     //   GRANDchild page
-    elseif ( is_page_template('template-grandchild.php') ):
+//    elseif ( is_page_template('template-grandchild.php') ):
         wp_enqueue_style('grandchild-page-styles', get_template_directory_uri() . '/dist/css/grandchild-page.css', array(), '1.0.0', 'all');
 
 
-    endif;
+//    endif;
 
 }
 

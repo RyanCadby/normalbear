@@ -1,15 +1,14 @@
 <?php
 
-function cta($id) {
+function cta() {
     // CTA section
-    $cta = get_field('_cta', $id, true);
-    $cta_head = $cta['head'];
-    $cta_sub = $cta['sub'];
-    $cta_btn_link = $cta['link'];
-    $cta_btn_txt = $cta['txt'];
-    $cta_bg = $cta['bg_img'];
+    $cta_head = get_sub_field('head');
+    $cta_sub = get_sub_field('sub');
+    $cta_btn_link = get_sub_field('link');
+    $cta_btn_txt = get_sub_field('txt');
+    $cta_bg = get_sub_field('bg_img');
     if(!$cta_bg): $cta_bg = get_template_directory_uri() . '/dist/images/cta-bg.png'; endif;
-    $cta_btn_color = $cta['btn_color'];
+    $cta_btn_color = get_sub_field('btn_color');
 
     ?>
 
